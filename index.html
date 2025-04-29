@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrix Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.1/math.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Matrix Calculator</h1>
+
+    <div class="matrix-setup">
+      <label for="rows">Rows:</label>
+      <input type="number" id="rows" value="3" min="1" />
+      <label for="cols">Columns:</label>
+      <input type="number" id="cols" value="3" min="1" />
+      <button class="small-btn" onclick="clearInputs()">Clear All</button>
+      <button class="small-btn" onclick="fillRandomValues()">Randomize All</button>
+    </div>
+
+    <div class="matrix-inputs">
+      <div>
+        <h2>Matrix A</h2>
+        <div id="matrixAInputs" class="matrix"></div>
+      </div>
+      <div>
+        <h2>Matrix B</h2>
+        <div id="matrixBInputs" class="matrix"></div>
+      </div>
+      <div>
+        <h2>Right-hand Side (B in Ax = B)</h2>
+        <div id="rhsBInputs" class="matrix"></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <!-- First row (7 buttons) -->
+      <button class="small-btn" onclick="addMatrices()">A + B</button>
+      <button class="small-btn" onclick="subtractMatrices()">A - B</button>
+      <button class="small-btn" onclick="multiplyMatrices()">A × B</button>
+      <button class="small-btn" onclick="detMatrix('A')">det(A)</button>
+      <button class="small-btn" onclick="detMatrix('B')">det(B)</button>
+      <button class="small-btn" onclick="transposeMatrix('A')">Transpose(A)</button>
+      <button class="small-btn" onclick="transposeMatrix('B')">Transpose(B)</button>
+
+      <!-- Second row (7 buttons) -->
+      <button class="small-btn" onclick="calculateAdjoint('A')">Adjoint(A)</button>
+      <button class="small-btn" onclick="calculateAdjoint('B')">Adjoint(B)</button>
+      <button class="small-btn" onclick="calculateMatrixPower('A')">Power(A)</button>
+      <button class="small-btn" onclick="calculateMatrixPower('B')">Power(B)</button>
+      <button class="small-btn" onclick="inverseMatrix('A')">Inverse(A)</button>
+      <button class="small-btn" onclick="inverseMatrix('B')">Inverse(B)</button>
+      <button class="small-btn" onclick="solveSystem()">Solve Ax=B</button>
+    </div>
+
+    <div class="result" id="resultBox">
+      <h2>Result</h2>
+      <pre id="result"></pre>
+      <button class="small-btn" onclick="downloadResult()">Save Result</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

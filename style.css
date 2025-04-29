@@ -1,0 +1,137 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #000428, #004e92);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  width: 95%;
+  text-align: center;
+  box-shadow: 0 0 30px cyan, 0 0 60px #00ffff;
+}
+
+h1, h2 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 15px;
+}
+
+.matrix-setup {
+  margin-bottom: 20px;
+}
+
+.matrix-setup label {
+  margin: 0 5px;
+  font-size: 1rem;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #000;
+  color: #0ff;
+  border: 1px solid #0ff;
+  text-align: center;
+  box-shadow: 0 0 8px #0ff;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.matrix-inputs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.matrix {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.matrix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matrix-label {
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+
+.matrix-cell {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00ffff;
+  background: #000;
+  color: white;
+  box-shadow: 0 0 6px #00ffff;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.small-btn {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  background: #00ffff;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.small-btn:hover {
+  background: #ff00ff;
+  color: white;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result pre {
+  background: #000;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  overflow-x: auto;
+  box-shadow: 0 0 10px #00ffff;
+}
